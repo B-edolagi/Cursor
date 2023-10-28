@@ -1,4 +1,5 @@
 import { Cursor, Login, More, Register } from "../buttons";
+import { Search } from "../search";
 import styles from "./styles.module.css";
 function Header() {
   return (
@@ -7,6 +8,7 @@ function Header() {
       <Register />
       <More />
       <Cursor />
+      <Search />
     </div>
   );
 }

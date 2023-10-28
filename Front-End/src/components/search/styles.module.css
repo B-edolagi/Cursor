@@ -1,0 +1,24 @@
+.Search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 631px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 21px;
+    font-size: 32px;
+}
+
+p {
+    display: flex;
+    margin-left: 11px;
+}
+
+.Search_main {
+    border: 0px;
+    max-width: 580px;
+    width: 100%;
+    padding: 12.5px 0px;
+    border-radius: 30px;
+    outline: none;
+}
