@@ -12,16 +12,17 @@ const Catalog = () => {
     opacity: isCatalogVisible ? "1" : "0",
     overflow: "hidden",
     transition: "max-height 1s ease-in-out, opacity 0.3s ease-in-out",
+    position: "absolute",
   };
   const pStyles = {
     color: "rgba(23, 26, 83, 1)",
-    "font-size": "18px",
-    "font-family": "Montserrat",
+    fontSize: "18px",
+    fontFamily: "Montserrat",
     display: "flex",
-    "align-items": "end",
+    alignItems: "end",
   };
   const div = {
-    "max-width": "100px",
+    maxWidth: "100px",
     width: "100%",
   };
   return (

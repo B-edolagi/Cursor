@@ -1,0 +1,27 @@
+.MainCourses {
+    background-color: rgba(247, 247, 247, 1);
+    padding: 57px 0px 45px;
+    margin-top: 40px;
+}
+
+.MainCourses_wrap {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0px 230px;
+    gap: 31px;
+}
+
+.WrapH2 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    line-height: 36.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.WrapImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}

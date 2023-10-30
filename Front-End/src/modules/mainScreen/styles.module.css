@@ -1,0 +1,41 @@
+.MainScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(247, 247, 247, 1);
+    padding: 10px 0px;
+}
+
+.Title {
+    display: flex;
+    flex-flow: column;
+    max-width: 480px;
+    width: 100%;
+    gap: 25px;
+    margin-left: 92px;
+}
+
+.TitleInformation {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+}
+
+.TitleH2 {
+    color: rgba(23, 26, 83, 1);
+    font-size: 32px;
+    line-height: 39px;
+    max-width: 480px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.TitleP {
+    color: rgba(23, 26, 83, 1);
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 456px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
