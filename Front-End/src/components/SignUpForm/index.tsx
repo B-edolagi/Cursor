@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import styles from "./styles.module.css";
-type RegisterModalProps = {
+
+type SignUpFormProps = {
   isOpen: boolean;
   onRequestClose: () => void;
 };
 
-const RegisterModal: React.FC<RegisterModalProps> = ({
-  isOpen,
-  onRequestClose,
+const SignUpForm: React.FC<SignUpFormProps> = ({
 }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -16,15 +15,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   const handleRegister = () => {
     // Здесь вы можете обработать введенные данные регистрации и выполнить необходимую логику
     console.log(`Логин: ${username}, Пароль: ${password}`);
-    // Закрываем модальное окно
-    onRequestClose();
   };
 
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-      contentLabel="Регистрация"
+    <div
       className={styles.Register__modal}
     >
       <h2 className={styles.Register__modal_h2}>Регистрация</h2>
@@ -49,8 +43,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           Зарегистрироваться
         </button>
       </form>
-    </Modal>
+    </div>
   );
 };
 
-export default RegisterModal;
+export default SignUpForm;

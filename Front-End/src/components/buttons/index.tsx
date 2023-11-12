@@ -2,8 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import styles from "./styles.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
-// import LoginModal from "../modal_login";
-import RegisterModal from "../modal_reg";
+import AuthModal from "../AuthModal";
 export interface ButtonProps {
   fullWidth?: boolean;
   onClick?: () => void;
@@ -11,80 +10,81 @@ export interface ButtonProps {
 }
 
 export function Login(props: PropsWithChildren<ButtonProps>) {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  const openLoginModal = () => {
-    setIsLoginModalOpen(true);
+  const openAuthModal = () => {
+    setIsAuthModalOpen(true);
+    
   };
 
-  const closeLoginModal = () => {
-    setIsLoginModalOpen(false);
+  const closeAuthModal = () => {
+    setIsAuthModalOpen(false);
   };
   return (
     <>
       <button
-        onClick={openLoginModal}
+        onClick={openAuthModal}
         type="button"
         disabled={props.disabled}
         className={styles.Login}
       >
         Войти
       </button>
-      {/* <LoginModal isOpen={isLoginModalOpen} onRequestClose={closeLoginModal} /> */}
+      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
     </>
   );
 }
 export function Register(props: PropsWithChildren<ButtonProps>) {
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  const openRegisterModal = () => {
-    setIsRegisterModalOpen(true);
+  const openAuthModal = () => {
+    setIsAuthModalOpen(true);
   };
 
-  const closeRegisterModal = () => {
-    setIsRegisterModalOpen(false);
+  const closeAuthModal = () => {
+    setIsAuthModalOpen(false);
   };
 
   return (
     <>
       <button
-        onClick={openRegisterModal}
+        onClick={openAuthModal}
         type="button"
         disabled={props.disabled}
         className={styles.Register}
       >
         Регистрация
       </button>
-      <RegisterModal
-        isOpen={isRegisterModalOpen}
-        onRequestClose={closeRegisterModal}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
       />
     </>
   );
 }
 export function Cursor(props: PropsWithChildren<ButtonProps>) {
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  const openRegisterModal = () => {
-    setIsRegisterModalOpen(true);
+  const openAuthModal = () => {
+    setIsAuthModalOpen(true);
   };
 
-  const closeRegisterModal = () => {
-    setIsRegisterModalOpen(false);
+  const closeAuthModal = () => {
+    setIsAuthModalOpen(false);
   };
   return (
     <>
       <button
-        onClick={openRegisterModal}
+        onClick={openAuthModal}
         type="button"
         disabled={props.disabled}
         className={styles.Cursor}
       >
         Присоедениться к Cursor
       </button>
-      <RegisterModal
-        isOpen={isRegisterModalOpen}
-        onRequestClose={closeRegisterModal}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
       />
     </>
   );
