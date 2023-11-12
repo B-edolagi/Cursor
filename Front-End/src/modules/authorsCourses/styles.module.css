@@ -30,8 +30,9 @@
     align-items: center;
     flex-flow: column;
     gap: 17px;
-    max-width: 300px;
-    width: 100%;
+    width: 230px;
+    /* width: 300px; */
+    /* width: 100%; */
 }
 
 .Wrap_title {
