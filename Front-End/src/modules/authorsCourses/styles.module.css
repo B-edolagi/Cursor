@@ -1,0 +1,105 @@
+.Section_Online {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.Main_h2 {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Main_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Wrap {
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+    padding: 30px 40px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 17px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.Wrap_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.Wrap_title_inf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.Inf_inf {
+    display: flex;
+    gap: 4px;
+    flex-flow: column;
+}
+
+.Inf_inf h3 {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Inf_inf p {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Inf_title {
+    display: flex;
+    align-items: center;
+    gap: 9.43px;
+    max-width: 154px;
+    width: 100%;
+}
+
+.Wrap_inf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 5px;
+    margin-left: 50px;
+}
+
+.Wrap_inf_ {
+    max-width: 134px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css"; // Замените на ваш стиль
 import { More, Next, Next1 } from "../../components/buttons";
-import { BsStarFill } from "react-icons/bs";
-import { BsStarHalf } from "react-icons/bs";
-import { BsStar } from "react-icons/bs";
 import { CgSandClock } from "react-icons/cg";
 import { FiWatch } from "react-icons/fi";
 const data = [
@@ -40,7 +37,7 @@ const data = [
   // Добавьте данные для остальных элементов
 ];
 
-function MyComponent() {
+function BestCourses() {
   return (
     <section className={styles.Section_Online}>
       <h2 className={styles.Main_h2}>Онлайн-курсы</h2>
@@ -96,7 +93,7 @@ function MyComponent() {
                       <div key={timeIndex} className={styles.Time_wks}>
                         <div className={styles.snd}>
                           {" "}
-                          <img src="./src/assets/SandClock.svg" alt="star" />
+                          <CgSandClock />
                         </div>
                         <p className={styles.snd_p}>{time}</p>
                       </div>
@@ -106,69 +103,7 @@ function MyComponent() {
                       <div key={timeIndex} className={styles.Time_wks}>
                         <div className={styles.snd}>
                           {" "}
-                          <img src="./src/assets/Watch.svg" alt="star" />
-                        </div>
-                        <p className={styles.snd_p}>{time}</p>
-                      </div>
-                    ))}
-                </div>
-                <More />
-              </div>
-            ))}
-          </div>
-          <div className={styles.Wrap}>
-            {data.map((item, index) => (
-              <div key={index} className={styles.Wrap_title}>
-                <img
-                  src={item.imageUrl}
-                  alt={item.imageAlt}
-                  width="300px"
-                  height="171px"
-                />
-                <div className={styles.Title_inf}>
-                  <h2 className={styles.Title_h2}>{item.title}</h2>
-                  <p className={styles.Title_p}>{item.description}</p>
-                  <div className={styles.Inf_rtng}>
-                    <div className={styles.Rtng}>
-                      <div className={styles.Full}>
-                        <img src="./src/assets/Star_full.svg" alt="star" />
-                      </div>
-                      <div className={styles.Full}>
-                        <img src="./src/assets/Star_full.svg" alt="star" />
-                      </div>
-                      <div className={styles.Full}>
-                        <img src="./src/assets/Star_full.svg" alt="star" />
-                      </div>
-                      <div className={styles.Full}>
-                        <img src="./src/assets/Star_full.svg" alt="star" />
-                      </div>
-                      <div className={styles.Half}>
-                        <img src="./src/assets/Star_half.svg" alt="star" />
-                      </div>
-                    </div>
-                    <div className={styles.Rtng_title}>
-                      <p>{item.rating}</p>
-                      <p>{item.additionalInfo}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.Wrap_Time}>
-                  {item.times &&
-                    item.times.map((time, timeIndex) => (
-                      <div key={timeIndex} className={styles.Time_wks}>
-                        <div className={styles.snd}>
-                          {" "}
-                          <img src="./src/assets/SandClock.svg" alt="star" />
-                        </div>
-                        <p className={styles.snd_p}>{time}</p>
-                      </div>
-                    ))}
-                  {item.times &&
-                    item.times1.map((time, timeIndex) => (
-                      <div key={timeIndex} className={styles.Time_wks}>
-                        <div className={styles.snd}>
-                          {" "}
-                          <img src="./src/assets/Watch.svg" alt="star" />
+                          <FiWatch />
                         </div>
                         <p className={styles.snd_p}>{time}</p>
                       </div>
@@ -185,4 +120,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default BestCourses;

@@ -13,6 +13,11 @@
     color: rgba(23, 26, 83, 1);
 }
 
+button {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
 .Register {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -52,4 +57,21 @@
     border: 1px solid rgba(23, 26, 83, 1);
     border-radius: 21px;
     padding: 9px 0px;
+}
+
+.Next {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+button:active {
+    transform: scale(0.90);
+    /* Уменьшаем кнопку при нажатии */
 }

@@ -11,36 +11,42 @@ export default function MainCourses() {
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
           <img
             src="./src/assets/vk.png"
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
           <img
             src="./src/assets/yandex.png"
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
           <img
             src="./src/assets/csc.png"
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
           <img
             src="./src/assets/bioinf.png"
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
           <img
             src="./src/assets/rudn.png"
             alt="samsung"
             width="144px"
             height="82px"
+            className={styles.Img}
           />
         </div>
       </div>
