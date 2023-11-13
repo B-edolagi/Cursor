@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom"; // Импортируйте Link из react-router-dom или используйте другую библиотеку для маршрутизации
 
 type SignUpFormProps = {
   isOpen: boolean;
@@ -13,7 +14,7 @@ type FormData = {
 
 // ...
 
-const SignUpForm: React.FC<SignUpFormProps> = ({ isOpen, onRequestClose }) => {
+const SignInForm: React.FC<SignUpFormProps> = ({ isOpen, onRequestClose }) => {
   const [formData, setFormData] = useState<FormData>({
     username: "",
     password: "",
@@ -66,17 +67,12 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ isOpen, onRequestClose }) => {
         <button type="button" onClick={handleLogin}>
           Войти
         </button>
-        <a href="#">Восстановить пароль</a>
+        <a href="#" className={styles.AAA}>
+          Восстановить пароль
+        </a>
       </form>
-      <div className={styles.Register__modal_bottom}>
-        {["vk", "google-plus", "github"].map((icon) => (
-          <a key={icon} href="#">
-            <img src={`./src/assets/${icon}-svgrepo-com.svg`} alt={icon} />
-          </a>
-        ))}
-      </div>
     </div>
   );
 };
 
-export default SignUpForm;
+export default SignInForm;

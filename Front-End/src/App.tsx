@@ -4,6 +4,7 @@ import { MainScreen } from "./modules/mainScreen";
 import MyComponent from "./modules/onlineCourses";
 import BestCourses from "./modules/bestCourses";
 import AuthorsCourses from "./modules/authorsCourses";
+import Footer from "./modules/footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <MyComponent />
       <AuthorsCourses />
       <BestCourses />
+      <Footer />
     </>
   );
 }

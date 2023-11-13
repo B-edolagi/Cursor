@@ -1,7 +1,13 @@
 .Section_Online {
     display: flex;
-    flex-flow: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 51.5px;
+}
+
+.Section_Online_wrpa {
+    display: flex;
+    flex-flow: column;
     gap: 33px;
 }
 
@@ -17,6 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.Section_Online_wrpa img {
+    border-radius: 20px 20px 0px 0px;
 }
 
 .Online_wrap {
@@ -44,6 +55,8 @@
 .Wrap_title {
     display: flex;
     flex-flow: column;
+    justify-content: center;
+    align-items: center;
     gap: 22px;
     background-color: rgba(247, 247, 247, 1);
     border-radius: 20px;
@@ -135,4 +148,12 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.8);
+}
+
+.Main_wrap {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 59px;
 }

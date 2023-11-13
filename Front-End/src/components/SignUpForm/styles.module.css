@@ -4,6 +4,7 @@
     align-items: center;
     flex-flow: column;
     gap: 15px;
+    padding-bottom: 5px;
 }
 
 .Form__top {
@@ -17,7 +18,7 @@
 .Register__modal_form label {
     color: #171A53;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -50,7 +51,7 @@
     width: 100%;
     color: #FFF;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -64,9 +65,31 @@
     justify-content: center;
     align-items: center;
     gap: 31px;
-    padding-top: 20px;
+    padding-top: 16px;
 }
 
 .Register__modal_bottom a {
     height: 40px;
+}
+
+.AAA {
+    color: #4485ED;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    /* 142.857% */
+    text-decoration-line: underline;
+}
+
+.PPP {
+    color: #525317;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
 }

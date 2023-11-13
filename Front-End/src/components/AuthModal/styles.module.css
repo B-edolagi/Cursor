@@ -7,3 +7,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.CloseButton {
+    background: none;
+    border: 0px;
+    position: relative;
+    left: 157.5px;
+    top: 2.2px;
+}
+
+.Tabs__div {
+    padding: 16px 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+.Register__modal_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}

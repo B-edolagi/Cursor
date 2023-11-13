@@ -66,17 +66,16 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ isOpen, onRequestClose }) => {
         <button type="button" onClick={handleRegister}>
           Регистрация
         </button>
-        <p>
-          <a href="#">Правила</a> и <a href="#">Конфиденциальность</a>
+        <p className={styles.PPP}>
+          <a href="#" className={styles.AAA}>
+            Правила
+          </a>{" "}
+          и{" "}
+          <a href="#" className={styles.AAA}>
+            Конфиденциальность
+          </a>
         </p>
       </form>
-      <div className={styles.Register__modal_bottom}>
-        {["vk", "google-plus", "github"].map((icon) => (
-          <a key={icon} href="#">
-            <img src={`./src/assets/${icon}-svgrepo-com.svg`} alt={icon} />
-          </a>
-        ))}
-      </div>
     </div>
   );
 };

@@ -2,12 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
+}
+
+.Section_Online_wrap {
+    display: flex;
     flex-flow: column;
+    max-width: 1140px;
+    gap: 30px;
 }
 
 .Main_h2 {
     color: rgba(0, 0, 0, 0.80);
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -58,7 +65,7 @@
 
 .Inf_inf h3 {
     color: rgba(0, 0, 0, 0.80);
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -67,7 +74,7 @@
 
 .Inf_inf p {
     color: rgba(0, 0, 0, 0.50);
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -98,7 +105,7 @@
     align-items: center;
     gap: 10px;
     color: rgba(0, 0, 0, 0.80);
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;

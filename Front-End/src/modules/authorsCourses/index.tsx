@@ -44,37 +44,39 @@ const data = [
 function AuthorsCourses() {
   return (
     <section className={styles.Section_Online}>
-      <h2 className={styles.Main_h2}>Авторы курсов</h2>
-      <div className={styles.Main_block}>
-        {data.map((item, index) => (
-          <div className={styles.Wrap}>
-            <div className={styles.Wrap_title}>
-              <img src={item.human} alt="human" />
-              <div className={styles.Wrap_title_inf}>
-                <div className={styles.Inf_inf}>
-                  <h3>{item.name}</h3>
-                  <p>{item.title}</p>
+      <div className={styles.Section_Online_wrap}>
+        <h2 className={styles.Main_h2}>Авторы курсов</h2>
+        <div className={styles.Main_block}>
+          {data.map((item, index) => (
+            <div className={styles.Wrap}>
+              <div className={styles.Wrap_title}>
+                <img src={item.human} alt="human" />
+                <div className={styles.Wrap_title_inf}>
+                  <div className={styles.Inf_inf}>
+                    <h3>{item.name}</h3>
+                    <p>{item.title}</p>
+                  </div>
+                  <div className={styles.Inf_title}>
+                    <img src={item.star} alt="star" />
+                    <p>
+                      {item.rating} {item.cmnts}
+                    </p>
+                  </div>
                 </div>
-                <div className={styles.Inf_title}>
-                  <img src={item.star} alt="star" />
-                  <p>
-                    {item.rating} {item.cmnts}
-                  </p>
+              </div>
+              <div className={styles.Wrap_inf}>
+                <div className={styles.Wrap_inf_}>
+                  <img src={item.stdnts_img} alt="stdnt" />
+                  <p>{item.stdnts}</p>
+                </div>
+                <div className={styles.Wrap_inf_}>
+                  <img src={item.courses_img} alt="stdnt" />
+                  <p>{item.courses}</p>
                 </div>
               </div>
             </div>
-            <div className={styles.Wrap_inf}>
-              <div className={styles.Wrap_inf_}>
-                <img src={item.stdnts_img} alt="stdnt" />
-                <p>{item.stdnts}</p>
-              </div>
-              <div className={styles.Wrap_inf_}>
-                <img src={item.courses_img} alt="stdnt" />
-                <p>{item.courses}</p>
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

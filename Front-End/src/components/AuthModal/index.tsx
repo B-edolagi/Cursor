@@ -68,7 +68,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
         overlay: { backgroundColor: "rgba(0,0,0, 0.5)" },
       }}
     >
-      <div>
+      <div className={styles.Tabs__div}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -76,6 +76,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
         >
           <Tab label="Войти" {...a11yProps(0)} />
           <Tab label="Регистрация" {...a11yProps(1)} />
+          <button onClick={onRequestClose} className={styles.CloseButton}>
+            <img src="./src/assets/Union.svg" alt="close" />
+          </button>
         </Tabs>
       </div>
       <div>
@@ -95,6 +98,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
             }}
           />
         </TapPanel>
+      </div>
+      <div className={styles.Register__modal_bottom}>
+        {["vk", "google-plus", "github"].map((icon) => (
+          <a key={icon} href="#">
+            <img src={`./src/assets/${icon}-svgrepo-com.svg`} alt={icon} />
+          </a>
+        ))}
       </div>
     </Modal>
   );
