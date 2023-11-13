@@ -40,7 +40,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
   function a11yProps(index: number) {
     return {
       id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
+      "aria-controls": `simple-tabpanel-${index}`,
     };
   }
 
@@ -64,16 +64,37 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       className={styles.Register__modal}
+      style={{
+        overlay: { backgroundColor: "rgba(0,0,0, 0.5)" },
+      }}
     >
       <div>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item One" {...a11yProps(1)} />
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Войти" {...a11yProps(0)} />
+          <Tab label="Регистрация" {...a11yProps(1)} />
         </Tabs>
       </div>
       <div>
-        <TapPanel  value={value} index={0}><SignInForm /></TapPanel>
-        <TapPanel  value={value} index={1}><SignUpForm /></TapPanel>
+        <TapPanel value={value} index={0}>
+          <SignInForm
+            isOpen={true}
+            onRequestClose={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        </TapPanel>
+        <TapPanel value={value} index={1}>
+          <SignUpForm
+            isOpen={true}
+            onRequestClose={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        </TapPanel>
       </div>
     </Modal>
   );

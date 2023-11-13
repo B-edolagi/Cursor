@@ -1,41 +1,20 @@
-.Modal_login_wrap {
-    background: none;
+.Register__modal_form {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-flow: column;
+    gap: 15px;
 }
 
-.Modal__container {
-    width: 450px;
-    flex-shrink: 0;
-    padding: 30px 0px 20px 0px;
-    background-color: rgb(206, 205, 205);
-}
-
-.Modal_top {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
-}
-
-.Modal__container_top {
+.Form__top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
-    padding: 0px 30px 14px 30px;
+    flex-flow: column;
+    gap: 10px;
+    max-width: 290px;
+    width: 100%;
 }
 
-.Top_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.Top_title p {
+.Register__modal_form label {
     color: #171A53;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Montserrat;
@@ -46,38 +25,8 @@
     /* 111.111% */
 }
 
-.Top_title a {
-    color: #4485ED;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    text-decoration: none;
-    /* 111.111% */
-}
-
-.Top_icon {
-    height: 17px;
-}
-
-.Modal__container_middle {
-    padding-top: 51px;
-    padding-bottom: 47px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
-}
-
-.Modal__container_middle form {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.Input_modal {
-    max-width: 290px;
+.Form__input {
+    max-width: 288px;
     width: 100%;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.50);
@@ -85,9 +34,18 @@
     padding: 15.25px 0px;
 }
 
-.Input_modal_btn {
+.Form__bottom {
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    max-width: 290px;
+    width: 100%;
+}
+
+.Register__modal_form button {
     border-radius: 33px;
     background: #171A53;
+    padding: 10px;
     max-width: 220px;
     width: 100%;
     color: #FFF;
@@ -98,26 +56,17 @@
     font-weight: 600;
     line-height: 20px;
     border: 0px;
-    padding: 10px 0px;
     /* 111.111% */
 }
 
-form a {
-    color: #4485ED;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    text-decoration: none;
-    /* 125% */
-}
-
-.Modal__container_bottom {
-    padding-top: 20px;
+.Register__modal_bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 31px;
+    padding-top: 20px;
+}
+
+.Register__modal_bottom a {
+    height: 40px;
 }

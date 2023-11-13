@@ -14,7 +14,6 @@ export function Login(props: PropsWithChildren<ButtonProps>) {
 
   const openAuthModal = () => {
     setIsAuthModalOpen(true);
-    
   };
 
   const closeAuthModal = () => {
@@ -55,10 +54,7 @@ export function Register(props: PropsWithChildren<ButtonProps>) {
       >
         Регистрация
       </button>
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onRequestClose={closeAuthModal}
-      />
+      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
     </>
   );
 }
@@ -82,10 +78,7 @@ export function Cursor(props: PropsWithChildren<ButtonProps>) {
       >
         Присоедениться к Cursor
       </button>
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onRequestClose={closeAuthModal}
-      />
+      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
     </>
   );
 }
