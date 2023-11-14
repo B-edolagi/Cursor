@@ -85,7 +85,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
         "font-family": "'Montserrat', sans-serif",
         "font-size": "16px",
         "font-style": "normal",
-        "font-weight": "500",
+        "font-weight": "600",
         "line-height": "20px",
       },
     };
