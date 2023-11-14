@@ -126,7 +126,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
               throw new Error("Function not implemented.");
             }}
           />
-          <button onClick={handleButtonClick}>Восстановить пароль</button>
+          <button
+            className={styles.PasswordRecoveryBtn}
+            onClick={handleButtonClick}
+          >
+            Восстановить пароль
+          </button>
         </TapPanel>
         <TapPanel value={value} index={1}>
           <SignUpForm
@@ -145,7 +150,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
           />
         </TapPanel>
       </div>
-      <div className={styles.Register__modal_bottom}>
+      <div
+        className={styles.Register__modal_bottom}
+        style={{ display: value !== 2 ? "flex" : "none" }}
+      >
         {["vk", "google-plus", "github"].map((icon) => (
           <a key={icon} href="#">
             <img src={`./src/assets/${icon}-svgrepo-com.svg`} alt={icon} />

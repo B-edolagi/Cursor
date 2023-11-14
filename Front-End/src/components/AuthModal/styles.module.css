@@ -13,8 +13,14 @@
     background: none;
     border: 0px;
     position: relative;
-    left: 157.5px;
+    left: 140.5px;
     top: 2.2px;
+}
+
+.PasswordRecoveryBtn {
+    position: absolute;
+    top: 72%;
+    left: 35%;
 }
 
 .Tabs__div {
