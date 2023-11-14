@@ -40,6 +40,11 @@
     width: 230px;
     /* max-width: 300px; */
     /* width: 100%; */
+    transition: 0.5s;
+}
+
+.Wrap:hover {
+    scale: 105%;
 }
 
 .Wrap_title {

@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import SignInForm from "../SignInForm";
 import SignUpForm from "../SignUpForm";
 import { Tab, Tabs, Box, Typography } from "@mui/material";
+import PasswordRecoveryForm from "../PasswordRecovery";
 
 type AuthModalProps = {
   isOpen: boolean;
@@ -52,13 +53,43 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
     setValue(newValue);
   };
 
+  const handleButtonClick = () => {
+    setValue(2);
+  };
+
   const handleRegister = () => {
     // Здесь вы можете обработать введенные данные регистрации и выполнить необходимую логику
     console.log(`Логин: ${username}, Пароль: ${password}`);
     // Закрываем модальное окно
     onRequestClose();
   };
-
+  const getStyles = () => {
+    return {
+      tabs: {
+        backgroundColor: "Colors.teal200",
+        display: "none",
+        color: "#4485ED",
+        "font-family": "Montserrat",
+        "font-size": "18px",
+        "font-style": "normal",
+        "font-weight": "600",
+        "line-height": "20px",
+      },
+    };
+  };
+  const getStyles1 = () => {
+    return {
+      tabs: {
+        backgroundColor: "Colors.teal200",
+        color: "#4485ED",
+        "font-family": "'Montserrat', sans-serif",
+        "font-size": "16px",
+        "font-style": "normal",
+        "font-weight": "500",
+        "line-height": "20px",
+      },
+    };
+  };
   return (
     <Modal
       isOpen={isOpen}
@@ -74,8 +105,14 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Войти" {...a11yProps(0)} />
-          <Tab label="Регистрация" {...a11yProps(1)} />
+          <Tab label="Войти" {...a11yProps(0)} style={getStyles1().tabs} />
+          <Tab
+            label="Регистрация"
+            {...a11yProps(1)}
+            style={getStyles1().tabs}
+          />
+          <Tab label="" {...a11yProps(2)} style={getStyles().tabs}></Tab>
+
           <button onClick={onRequestClose} className={styles.CloseButton}>
             <img src="./src/assets/Union.svg" alt="close" />
           </button>
@@ -89,9 +126,18 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
               throw new Error("Function not implemented.");
             }}
           />
+          <button onClick={handleButtonClick}>Восстановить пароль</button>
         </TapPanel>
         <TapPanel value={value} index={1}>
           <SignUpForm
+            isOpen={true}
+            onRequestClose={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        </TapPanel>
+        <TapPanel value={value} index={2}>
+          <PasswordRecoveryForm
             isOpen={true}
             onRequestClose={function (): void {
               throw new Error("Function not implemented.");

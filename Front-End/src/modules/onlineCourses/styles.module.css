@@ -60,6 +60,11 @@
     gap: 22px;
     background-color: rgba(247, 247, 247, 1);
     border-radius: 20px;
+    transition: 0.5s;
+}
+
+.Wrap_title:hover {
+    scale: 105%;
 }
 
 .Title_inf {
