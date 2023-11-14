@@ -1,3 +1,5 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./modules/header";
 import MainCourses from "./modules/mainCourses";
 import { MainScreen } from "./modules/mainScreen";
@@ -6,7 +8,7 @@ import BestCourses from "./modules/bestCourses";
 import AuthorsCourses from "./modules/authorsCourses";
 import Footer from "./modules/footer";
 
-function App() {
+function HomePage() {
   return (
     <>
       <Header />
@@ -19,5 +21,31 @@ function App() {
     </>
   );
 }
+
+function CoursePage() {
+  return (
+    <>
+      <Header />
+      <h1>COURSE PAGE</h1>
+      <Footer />
+    </>
+  );
+}
+
+const NotFoundPage = () => {
+  return <div>404 Not Found</div>;
+};
+
+const App = () => {
+  return (
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Course" element={<CoursePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
+  );
+};
 
 export default App;
