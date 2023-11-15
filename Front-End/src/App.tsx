@@ -1,33 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./modules/header";
-import MainCourses from "./modules/mainCourses";
-import { MainScreen } from "./modules/mainScreen";
-import MyComponent from "./modules/onlineCourses";
-import BestCourses from "./modules/bestCourses";
-import AuthorsCourses from "./modules/authorsCourses";
-import Footer from "./modules/footer";
+import Home from "./Pages/Home";
+import CoursePage from "./Pages/CoursePage";
 
 function HomePage() {
   return (
     <>
-      <Header />
-      <MainScreen />
-      <MainCourses />
-      <MyComponent />
-      <AuthorsCourses />
-      <BestCourses />
-      <Footer />
+      <Home />
     </>
   );
 }
 
-function CoursePage() {
+function Courses() {
   return (
     <>
-      <Header />
-      <h1>COURSE PAGE</h1>
-      <Footer />
+      <CoursePage />
     </>
   );
 }
