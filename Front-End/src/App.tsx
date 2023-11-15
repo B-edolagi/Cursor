@@ -1,22 +1,15 @@
-import Header from "./modules/header";
-import MainCourses from "./modules/mainCourses";
-import { MainScreen } from "./modules/mainScreen";
-import MyComponent from "./modules/onlineCourses";
-import BestCourses from "./modules/bestCourses";
-import AuthorsCourses from "./modules/authorsCourses";
-import Footer from "./modules/footer";
-
+import { Link, Route, Router, Routes } from "react-router-dom";
+import Main from "./pages";
+import PrfsrMain from "./modules/prfsrMain";
+import { useState } from "react";
+import NotFound from "./modules/notFoundPage";
 function App() {
   return (
-    <>
-      <Header />
-      <MainScreen />
-      <MainCourses />
-      <MyComponent />
-      <AuthorsCourses />
-      <BestCourses />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/prfsr-main/:id" element={<PrfsrMain />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

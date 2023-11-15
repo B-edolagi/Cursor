@@ -67,9 +67,6 @@ const SignInForm: React.FC<SignUpFormProps> = ({ isOpen, onRequestClose }) => {
         <button type="button" onClick={handleLogin}>
           Войти
         </button>
-        <a href="#" className={styles.AAA}>
-          Восстановить пароль
-        </a>
       </form>
     </div>
   );

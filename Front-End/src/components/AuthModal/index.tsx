@@ -81,7 +81,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
     return {
       tabs: {
         backgroundColor: "Colors.teal200",
-        color: "#4485ED",
+
         "font-family": "'Montserrat', sans-serif",
         "font-size": "16px",
         "font-style": "normal",

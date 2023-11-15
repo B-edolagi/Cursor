@@ -55,7 +55,7 @@ export default function Footer() {
               { src: "Group.svg" },
               { src: "Group-1.svg" },
             ].map((item, index) => (
-              <img src={`./src/assets/${item.src}`} alt="svg" />
+              <img key={index} src={`./src/assets/${item.src}`} alt="svg" />
             ))}
           </div>
         </div>
