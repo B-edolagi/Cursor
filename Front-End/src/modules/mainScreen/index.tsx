@@ -16,7 +16,7 @@ export function MainScreen() {
         <Cursor />
       </div>
       <img
-        src="/src/assets/1.png"
+        src="../src/assets/1.png"
         alt="MainScrenn"
         width="573px"
         height="422px"

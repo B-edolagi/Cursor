@@ -25,11 +25,11 @@ export default function Footer() {
               Наш рейтинг <span>4.11 из 5 (на основании 5457 отзывов)</span>
             </p>
             <div>
-              <img src="./src/assets/Star_full.svg" alt="star" />
-              <img src="./src/assets/Star_full.svg" alt="star" />
-              <img src="./src/assets/Star_full.svg" alt="star" />
-              <img src="./src/assets/Star_full.svg" alt="star" />
-              <img src="./src/assets/Star_half.svg" alt="star" />
+              <img src="../src/assets/Star_full.svg" alt="star" />
+              <img src="../src/assets/Star_full.svg" alt="star" />
+              <img src="../src/assets/Star_full.svg" alt="star" />
+              <img src="../src/assets/Star_full.svg" alt="star" />
+              <img src="../src/assets/Star_half.svg" alt="star" />
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function Footer() {
               { src: "Group.svg" },
               { src: "Group-1.svg" },
             ].map((item, index) => (
-              <img key={index} src={`./src/assets/${item.src}`} alt="svg" />
+              <img key={index} src={`../src/assets/${item.src}`} alt="svg" />
             ))}
           </div>
         </div>

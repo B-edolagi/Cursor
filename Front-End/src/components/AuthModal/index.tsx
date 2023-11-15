@@ -114,7 +114,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
           <Tab label="" {...a11yProps(2)} style={getStyles().tabs}></Tab>
 
           <button onClick={onRequestClose} className={styles.CloseButton}>
-            <img src="./src/assets/Union.svg" alt="close" />
+            <img src="../src/assets/Union.svg" alt="close" />
           </button>
         </Tabs>
       </div>
