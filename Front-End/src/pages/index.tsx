@@ -6,6 +6,8 @@ import Header from "../modules/header";
 import MainCourses from "../modules/mainCourses";
 import { MainScreen } from "../modules/mainScreen";
 import MyComponent from "../modules/onlineCourses";
+import PrfsrMain from "../modules/prfsrMain";
+import PrfsrCatalog from "../modules/prfsrCatalog";
 export default function Main() {
   return (
     <>
@@ -19,3 +21,13 @@ export default function Main() {
     </>
   );
 }
+export const Professor = () => {
+  return (
+    <>
+      <Header />
+      <PrfsrMain />
+      <PrfsrCatalog />
+      <Footer />
+    </>
+  );
+};

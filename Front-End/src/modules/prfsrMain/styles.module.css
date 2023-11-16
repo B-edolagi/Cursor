@@ -119,6 +119,10 @@
     gap: 15px;
 }
 
+.User__h3:hover {
+    text-decoration: underline solid #171A53;
+}
+
 .Bottom__slider {
     display: flex;
     justify-content: center;
@@ -143,6 +147,7 @@
 .Bottom__slider_user:hover {
     filter: drop-shadow(0px 0px 25px rgba(189, 234, 9, 0.25));
     cursor: pointer;
+    scale: 103%;
 }
 
 .User__title {

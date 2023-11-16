@@ -9,11 +9,6 @@
     font-size: 32px;
 }
 
-#p {
-    display: flex;
-    margin-left: 11px;
-}
-
 .Search_main {
     border: 0px;
     max-width: 580px;

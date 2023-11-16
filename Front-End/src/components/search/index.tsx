@@ -3,9 +3,7 @@ import style from "./styles.module.css";
 export function Search() {
   return (
     <div className={style.Search}>
-      <p id="p">
-        <CiSearch />
-      </p>
+      <CiSearch />
       <input
         type="search"
         placeholder="Поиск онлайн-курса, автора курса"

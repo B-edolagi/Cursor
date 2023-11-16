@@ -76,7 +76,7 @@ export function Cursor(props: PropsWithChildren<ButtonProps>) {
         disabled={props.disabled}
         className={styles.Cursor}
       >
-        Присоедениться к Cursor
+        Присоединиться к Cursor
       </button>
       <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
     </>

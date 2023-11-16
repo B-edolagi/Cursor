@@ -27,12 +27,39 @@ const users = [
 function PrfsrMain() {
   return (
     <>
-      <Header />
       <section className={styles.Prfsr__section}>
         <div className={styles.Prfsr__section_wrap}>
           <div className={styles.Wrap__title}>
             <div className={styles.Wrap__title_photo}>
-              <img src="" alt="Professor" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="150"
+                height="150"
+                viewBox="0 0 150 150"
+                fill="none"
+              >
+                <rect width="150" height="150" rx="5" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="149"
+                  height="149"
+                  rx="4.5"
+                  stroke="black"
+                  stroke-opacity="0.5"
+                />
+                <path
+                  d="M75.0011 66.2014C85.8263 66.2014 94.6018 57.4259 94.6018 46.6007C94.6018 35.7755 85.8263 27 75.0011 27C64.1759 27 55.4004 35.7755 55.4004 46.6007C55.4004 57.4259 64.1759 66.2014 75.0011 66.2014Z"
+                  stroke="black"
+                  stroke-opacity="0.5"
+                />
+                <path
+                  d="M114 118.47C112.961 99.5782 107.176 85.8021 74.9998 85.8021C42.824 85.8021 37.0398 99.5782 36 118.47"
+                  stroke="black"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                />
+              </svg>
               <div className={styles.Photo_title}>
                 {[
                   {
@@ -114,7 +141,7 @@ function PrfsrMain() {
                         {" "}
                         <div>
                           {" "}
-                          <h3>Пользователь</h3>
+                          <h3 className={styles.User__h3}>Пользователь</h3>
                           <p>05 ноября, 09:46</p>
                         </div>
                         <div className={styles.User__title_rtng}>
@@ -163,7 +190,6 @@ function PrfsrMain() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

@@ -6,7 +6,7 @@ export function MainScreen() {
       <div className={styles.Title}>
         <div className={styles.TitleInformation}>
           <h2 className={styles.TitleH2}>
-            Маркетплейс онлайн-курсов от префессионалов
+            Маркетплейс онлайн-курсов от профессионалов
           </h2>
           <p className={styles.TitleP}>
             Широкий выбор образовательных программ по маркетингу, дизайну,
