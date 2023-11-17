@@ -6,6 +6,7 @@ import { BsStarHalf } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
 import { CgSandClock } from "react-icons/cg";
 import { FiWatch } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 const data = [
   {
     title: "Учебный курс для веб-разработчиков",
@@ -74,6 +75,13 @@ const data1 = [
 ];
 
 function MyComponent() {
+  const navigate = useNavigate(); // Create a navigate function
+
+  const handleCursorClick = () => {
+    // Use navigate function to navigate to the desired path
+    navigate("/course");
+  };
+
   return (
     <section className={styles.Section_Online}>
       <div className={styles.Section_Online_wrpa}>
@@ -90,7 +98,11 @@ function MyComponent() {
           <div className={styles.Main_wrap}>
             <div className={styles.Wrap}>
               {data.map((item, index) => (
-                <div key={index} className={styles.Wrap_title}>
+                <div
+                  key={index}
+                  className={styles.Wrap_title}
+                  onClick={handleCursorClick}
+                >
                   <img
                     src={item.imageUrl}
                     alt={item.imageAlt}

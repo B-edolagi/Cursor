@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
@@ -11,11 +11,9 @@ export interface ButtonProps {
 
 export function Login(props: PropsWithChildren<ButtonProps>) {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-
   const openAuthModal = () => {
     setIsAuthModalOpen(true);
   };
-
   const closeAuthModal = () => {
     setIsAuthModalOpen(false);
   };
@@ -29,7 +27,11 @@ export function Login(props: PropsWithChildren<ButtonProps>) {
       >
         Войти
       </button>
-      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
+        defaultValue={0}
+      />
     </>
   );
 }
@@ -54,7 +56,11 @@ export function Register(props: PropsWithChildren<ButtonProps>) {
       >
         Регистрация
       </button>
-      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
+        defaultValue={1}
+      />
     </>
   );
 }
@@ -78,7 +84,11 @@ export function Cursor(props: PropsWithChildren<ButtonProps>) {
       >
         Присоединиться к Cursor
       </button>
-      <AuthModal isOpen={isAuthModalOpen} onRequestClose={closeAuthModal} />
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
+        defaultValue={1}
+      />
     </>
   );
 }

@@ -8,6 +8,7 @@ import { MainScreen } from "../modules/mainScreen";
 import MyComponent from "../modules/onlineCourses";
 import PrfsrMain from "../modules/prfsrMain";
 import PrfsrCatalog from "../modules/prfsrCatalog";
+import CourseMain from "../modules/CourseMain";
 export default function Main() {
   return (
     <>
@@ -27,6 +28,16 @@ export const Professor = () => {
       <Header />
       <PrfsrMain />
       <PrfsrCatalog />
+      <Footer />
+    </>
+  );
+};
+
+export const Course = () => {
+  return (
+    <>
+      <Header />
+      <CourseMain />
       <Footer />
     </>
   );

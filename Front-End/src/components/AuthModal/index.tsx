@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import styles from "./styles.module.css";
 
@@ -10,6 +10,7 @@ import PasswordRecoveryForm from "../PasswordRecovery";
 type AuthModalProps = {
   isOpen: boolean;
   onRequestClose: () => void;
+  defaultValue: number; // Переименовываем в defaultValue
 };
 
 interface TabPanelProps {
@@ -18,7 +19,22 @@ interface TabPanelProps {
   value: number;
 }
 
-const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
+const AuthModal: React.FC<AuthModalProps> = ({
+  isOpen,
+  onRequestClose,
+  defaultValue,
+}) => {
+  const [value, setValue] = React.useState(0);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  useEffect(() => {
+    setValue(defaultValue); // Обновляем значение value из defaultValue
+  }, [defaultValue]);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   function TapPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
     return (
@@ -44,14 +60,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onRequestClose }) => {
       "aria-controls": `simple-tabpanel-${index}`,
     };
   }
-
-  const [value, setValue] = React.useState(0);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   const handleButtonClick = () => {
     setValue(2);
