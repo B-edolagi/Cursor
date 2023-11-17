@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import styles from "./styles.module.css";
+import { Tab, Tabs, Box, Typography } from "@mui/material";
 
 import SignInForm from "../SignInForm";
 import SignUpForm from "../SignUpForm";
-import { Tab, Tabs, Box, Typography } from "@mui/material";
 import PasswordRecoveryForm from "../PasswordRecovery";
 
 type AuthModalProps = {
   isOpen: boolean;
   onRequestClose: () => void;
-  defaultValue: number; // Переименовываем в defaultValue
+  defaultValue: number;
 };
 
 interface TabPanelProps {
@@ -24,12 +24,15 @@ const AuthModal: React.FC<AuthModalProps> = ({
   onRequestClose,
   defaultValue,
 }) => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(defaultValue);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   useEffect(() => {
-    setValue(defaultValue); // Обновляем значение value из defaultValue
-  }, [defaultValue]);
+    if (!isOpen) {
+      setValue(defaultValue);
+    }
+  }, [isOpen, defaultValue]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -66,38 +69,34 @@ const AuthModal: React.FC<AuthModalProps> = ({
   };
 
   const handleRegister = () => {
-    // Здесь вы можете обработать введенные данные регистрации и выполнить необходимую логику
     console.log(`Логин: ${username}, Пароль: ${password}`);
-    // Закрываем модальное окно
     onRequestClose();
   };
-  const getStyles = () => {
-    return {
-      tabs: {
-        backgroundColor: "Colors.teal200",
-        display: "none",
-        color: "#4485ED",
-        "font-family": "Montserrat",
-        "font-size": "18px",
-        "font-style": "normal",
-        "font-weight": "600",
-        "line-height": "20px",
-      },
-    };
-  };
-  const getStyles1 = () => {
-    return {
-      tabs: {
-        backgroundColor: "Colors.teal200",
 
-        "font-family": "'Montserrat', sans-serif",
-        "font-size": "16px",
-        "font-style": "normal",
-        "font-weight": "600",
-        "line-height": "20px",
-      },
-    };
-  };
+  const getStyles = () => ({
+    tabs: {
+      backgroundColor: "Colors.teal200",
+      display: "none",
+      color: "#4485ED",
+      fontFamily: "Montserrat",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineHeight: "20px",
+    },
+  });
+
+  const getStyles1 = () => ({
+    tabs: {
+      backgroundColor: "Colors.teal200",
+      fontFamily: "'Montserrat', sans-serif",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineHeight: "20px",
+    },
+  });
+
   return (
     <Modal
       isOpen={isOpen}
@@ -120,7 +119,6 @@ const AuthModal: React.FC<AuthModalProps> = ({
             style={getStyles1().tabs}
           />
           <Tab label="" {...a11yProps(2)} style={getStyles().tabs}></Tab>
-
           <button onClick={onRequestClose} className={styles.CloseButton}>
             <img src="../src/assets/Union.svg" alt="close" />
           </button>
@@ -128,12 +126,7 @@ const AuthModal: React.FC<AuthModalProps> = ({
       </div>
       <div>
         <TapPanel value={value} index={0}>
-          <SignInForm
-            isOpen={true}
-            onRequestClose={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
+          <SignInForm isOpen={true} onRequestClose={() => {}} />
           <button
             className={styles.PasswordRecoveryBtn}
             onClick={handleButtonClick}
@@ -142,20 +135,10 @@ const AuthModal: React.FC<AuthModalProps> = ({
           </button>
         </TapPanel>
         <TapPanel value={value} index={1}>
-          <SignUpForm
-            isOpen={true}
-            onRequestClose={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
+          <SignUpForm isOpen={true} onRequestClose={() => {}} />
         </TapPanel>
         <TapPanel value={value} index={2}>
-          <PasswordRecoveryForm
-            isOpen={true}
-            onRequestClose={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
+          <PasswordRecoveryForm isOpen={true} onRequestClose={() => {}} />
         </TapPanel>
       </div>
       <div

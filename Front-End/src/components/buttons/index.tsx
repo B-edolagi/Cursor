@@ -1,41 +1,21 @@
-import { PropsWithChildren, useEffect, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import styles from "./styles.module.css";
-import { BsArrowLeft } from "react-icons/bs";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import AuthModal from "../AuthModal";
-export interface ButtonProps {
+
+interface ButtonProps {
   fullWidth?: boolean;
   onClick?: () => void;
   disabled?: boolean;
 }
 
-export function Login(props: PropsWithChildren<ButtonProps>) {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const openAuthModal = () => {
-    setIsAuthModalOpen(true);
-  };
-  const closeAuthModal = () => {
-    setIsAuthModalOpen(false);
-  };
-  return (
-    <>
-      <button
-        onClick={openAuthModal}
-        type="button"
-        disabled={props.disabled}
-        className={styles.Login}
-      >
-        Войти
-      </button>
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onRequestClose={closeAuthModal}
-        defaultValue={0}
-      />
-    </>
-  );
+interface AuthButtonProps extends ButtonProps {
+  children: ReactNode;
+  className: any;
+  defaultValue: number;
 }
-export function Register(props: PropsWithChildren<ButtonProps>) {
+
+const AuthButton: React.FC<AuthButtonProps> = (props) => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const openAuthModal = () => {
@@ -52,47 +32,44 @@ export function Register(props: PropsWithChildren<ButtonProps>) {
         onClick={openAuthModal}
         type="button"
         disabled={props.disabled}
-        className={styles.Register}
+        className={styles[props.className]}
       >
-        Регистрация
+        {props.children}
       </button>
       <AuthModal
         isOpen={isAuthModalOpen}
         onRequestClose={closeAuthModal}
-        defaultValue={1}
+        defaultValue={props.defaultValue}
       />
     </>
   );
-}
-export function Cursor(props: PropsWithChildren<ButtonProps>) {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+};
 
-  const openAuthModal = () => {
-    setIsAuthModalOpen(true);
-  };
-
-  const closeAuthModal = () => {
-    setIsAuthModalOpen(false);
-  };
+export function Login(props: ButtonProps) {
   return (
-    <>
-      <button
-        onClick={openAuthModal}
-        type="button"
-        disabled={props.disabled}
-        className={styles.Cursor}
-      >
-        Присоединиться к Cursor
-      </button>
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onRequestClose={closeAuthModal}
-        defaultValue={1}
-      />
-    </>
+    <AuthButton {...props} className="Login" defaultValue={0}>
+      Войти
+    </AuthButton>
   );
 }
-export function More(props: PropsWithChildren<ButtonProps>) {
+
+export function Register(props: ButtonProps) {
+  return (
+    <AuthButton {...props} className="Register" defaultValue={1}>
+      Регистрация
+    </AuthButton>
+  );
+}
+
+export function Cursor(props: ButtonProps) {
+  return (
+    <AuthButton {...props} className="Cursor" defaultValue={1}>
+      Присоединиться к Cursor
+    </AuthButton>
+  );
+}
+
+export function More(props: ButtonProps) {
   return (
     <button
       onClick={props.onClick}
@@ -104,7 +81,8 @@ export function More(props: PropsWithChildren<ButtonProps>) {
     </button>
   );
 }
-export function Next(props: PropsWithChildren<ButtonProps>) {
+
+export function Next(props: ButtonProps) {
   return (
     <button
       onClick={props.onClick}
@@ -117,7 +95,7 @@ export function Next(props: PropsWithChildren<ButtonProps>) {
   );
 }
 
-export function Next1(props: PropsWithChildren<ButtonProps>) {
+export function Next1(props: ButtonProps) {
   return (
     <button
       onClick={props.onClick}

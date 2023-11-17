@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./styles.module.css"; // Замените на ваш стиль
+import styles from "./styles.module.css";
 import { More, Next, Next1 } from "../../components/buttons";
 import { useNavigate } from "react-router-dom";
+
 const data = [
   {
     id: 0,
@@ -15,7 +16,7 @@ const data = [
     courses_img: "./src/assets/Document-1-Copy.svg",
     stdnts: "(2128 студентов)",
     courses: "(46 курсов)",
-  }, // Здесь вы можете указать данные для первого элемента
+  },
   {
     id: 1,
     name: "Артем Ефремов",
@@ -28,7 +29,7 @@ const data = [
     courses_img: "./src/assets/Document-1-Copy.svg",
     stdnts: "(1459 студентов)",
     courses: "(39 курсов)",
-  }, // Здесь вы можете указать данные для второго элемента
+  },
   {
     id: 2,
     name: "Елена Абрамова",
@@ -41,27 +42,26 @@ const data = [
     courses_img: "./src/assets/Document-1-Copy.svg",
     stdnts: "(2128 студентов)",
     courses: "(46 курсов)",
-  }, // Здесь вы можете указать данные для третьего элемента
-  // Добавьте данные для остальных элементов
+  },
 ];
 
 function AuthorsCourses() {
-  const navigate = useNavigate(); // Create a navigate function
+  const navigate = useNavigate();
 
-  const handleCursorClick = (id: any) => {
-    // Convert id to string and navigate
-    navigate(`/prfsr-main/${String(id)}`);
+  const handleCursorClick = (id: number) => {
+    navigate(`/prfsr-main/${id}`);
   };
+
   return (
     <section className={styles.Section_Online}>
       <div className={styles.Section_Online_wrap}>
         <h2 className={styles.Main_h2}>Авторы курсов</h2>
         <div className={styles.Main_block}>
-          {data.map((item, index) => (
+          {data.map((item) => (
             <div
               key={item.id}
               className={styles.Wrap}
-              onClick={handleCursorClick}
+              onClick={() => handleCursorClick(item.id)}
             >
               <div className={styles.Wrap_title}>
                 <img src={item.human} alt="human" />
