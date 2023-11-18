@@ -107,3 +107,42 @@ export function Next1(props: ButtonProps) {
     </button>
   );
 }
+
+export function Buy(props: ButtonProps) {
+  return (
+    <button
+      onClick={props.onClick}
+      type="button"
+      disabled={props.disabled}
+      className={styles.Buy}
+    >
+      Купить
+    </button>
+  );
+}
+
+export function TryFree(props: ButtonProps) {
+  return (
+    <button
+      onClick={props.onClick}
+      type="button"
+      disabled={props.disabled}
+      className={styles.TryFree}
+    >
+      Попробовать бесплатно
+    </button>
+  );
+}
+
+export function Favourites(props: ButtonProps) {
+  return (
+    <button
+      onClick={props.onClick}
+      type="button"
+      disabled={props.disabled}
+      className={styles.Fav}
+    >
+      Хочу пройти
+    </button>
+  );
+}

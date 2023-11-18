@@ -9,6 +9,7 @@ import MyComponent from "../modules/onlineCourses";
 import PrfsrMain from "../modules/prfsrMain";
 import PrfsrCatalog from "../modules/prfsrCatalog";
 import CourseMain from "../modules/CourseMain";
+import CourseDescription from "../modules/CourseDescription";
 export default function Main() {
   return (
     <>
@@ -38,6 +39,7 @@ export const Course = () => {
     <>
       <Header />
       <CourseMain />
+      <CourseDescription />
       <Footer />
     </>
   );

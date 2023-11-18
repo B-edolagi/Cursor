@@ -75,3 +75,51 @@ button:active {
     transform: scale(0.90);
     /* Уменьшаем кнопку при нажатии */
 }
+
+.Buy {
+    border-radius: 5px;
+    background: var(--system-colors-primary, #171A53);
+    color: var(--background-colors-white, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 308px;
+    width: 100%;
+    border: 0px;
+    padding: 13px 0px;
+}
+
+.TryFree {
+    border-radius: 5px;
+    border: 1px solid var(--system-colors-primary, #171A53);
+    background: var(--background-colors-white, #FFF);
+    color: var(--system-colors-primary, #171A53);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 308px;
+    width: 100%;
+    padding: 12px 0px;
+}
+
+.Fav {
+    border-radius: 5px;
+    border: 1px solid var(--system-colors-primary, #171A53);
+    background: var(--background-colors-white, #FFF);
+    color: var(--system-colors-primary, #171A53);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 308px;
+    width: 100%;
+    padding: 12px 0px;
+}
