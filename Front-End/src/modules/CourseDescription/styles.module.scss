@@ -3,8 +3,10 @@
     flex-flow: column;
     justify-content: center;
     gap: 25px;
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
+    padding-left: 230px;
+    padding-top: 60px;
     h2 {
         color: var(--system-colors-primary, #171A53);
         font-feature-settings: 'clig' off, 'liga' off;
@@ -236,5 +238,151 @@
                 line-height: normal;
             }
         }
+    }
+}
+
+.Rating {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 930px;
+    width: 100%;
+    gap: 53px;
+    padding-bottom: 25px;
+    .Rating__flex {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        .Rating__title {
+            display: flex;
+            gap: 31px;
+            flex-flow: column;
+            justify-content: center;
+            h2 {
+                color: var(--system-colors-primary, #171A53);
+                font-feature-settings: 'clig' off, 'liga' off;
+                /* H/H2 */
+                font-family: Montserrat;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+        .Rating__container {
+            max-width: 650px;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            gap: 30px;
+            .Rating__container_wrap {
+                display: flex;
+                flex-flow: column;
+                gap: 25px;
+                padding: 16px 15px 16px 20px;
+                justify-content: center;
+                .Wrap__stars {
+                    display: flex;
+                }
+                .Wrap__title {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    gap: 10px;
+                    p {
+                        color: var(--system-colors-primary, #171A53);
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        height: 90px;
+                    }
+                    .Wrap__title_user {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        a {
+                            color: var(--system-colors-primary, #171A53);
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            text-decoration-line: underline;
+                        }
+                        span {
+                            color: var(--system-colors-secondary-3, rgba(0, 0, 0, 0.50));
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Bottom__rating {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Bottom__rating h3 {
+    color: var(--system-colors-primary, #171A53);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Wrap_5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wrap_5 p {
+    color: var(--system-colors-primary, #171A53);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Wrap_5 span {
+    color: var(--system-colors-primary, #171A53);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Bottom__rating_wrap {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Description__container {
+        max-width: 1440px;
+        width: 100%;
     }
 }

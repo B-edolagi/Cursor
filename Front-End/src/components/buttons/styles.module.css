@@ -122,4 +122,8 @@ button:active {
     max-width: 308px;
     width: 100%;
     padding: 12px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

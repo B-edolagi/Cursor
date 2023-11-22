@@ -1,0 +1,174 @@
+.Register__modal_form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 17.5px;
+}
+
+.Promocode__div {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
+    /* Дополнительные стили, если нужны */
+}
+
+.Promocode__div.visible {
+    opacity: 1;
+    max-height: 40px;
+    /* Измените значение на максимальную высоту, которая может быть достигнута контентом */
+}
+
+.Form__top {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 39px;
+    .Promocode {
+        display: flex;
+        flex-flow: column;
+        gap: 13px;
+        .Promocode__div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            input {
+                max-width: 222px;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid var(--system-colors-secondary-3, rgba(0, 0, 0, 0.50));
+                background: var(--background-colors-white, #FFF);
+                padding: 9.25px 0px;
+            }
+            button {
+                color: var(--system-colors-primary, #171A53);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border-radius: 5px;
+                border: 1px solid var(--system-colors-primary, #171A53);
+                padding: 8.5px 0px;
+                max-width: 106px;
+                width: 100%;
+                background: none;
+            }
+        }
+        label {
+            color: var(--system-colors-primary, #171A53);
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: underline;
+            cursor: pointer;
+            text-underline-offset: 2.5px;
+        }
+    }
+    .Form__top_links {
+        flex-flow: column;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .Form__email {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        color: var(--system-colors-primary, #171A53);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .Form__cost {
+        display: flex;
+        align-items: start;
+        height: 30px;
+        gap: 82px;
+        label {
+            color: var(--system-colors-primary, #171A53);
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        span {
+            color: var(--system-colors-primary, #171A53);
+            font-feature-settings: 'clig' off, 'liga' off;
+            /* H/H3 */
+            font-family: Montserrat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            position: relative;
+            top: -20%;
+        }
+    }
+}
+
+.Form__bottom {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    gap: 22.5px;
+    button {
+        border-radius: 5px;
+        background: var(--system-colors-primary, #171A53);
+        max-width: 120px;
+        width: 100%;
+        padding: 7.75px;
+        border: none;
+        color: var(--background-colors-white, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .Form__bottom_links {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 10px;
+        a {
+            color: #000;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: underline;
+        }
+    }
+    p {
+        color: #000;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        a {
+            color: #000;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: underline;
+        }
+    }
+}

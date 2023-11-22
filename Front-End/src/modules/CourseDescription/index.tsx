@@ -126,13 +126,77 @@ export default function CourseDescription() {
       </div>
     );
   };
-  const Rating = () => {};
+  const Rating = () => {
+    const arr = [
+      {
+        titile:
+          "Огромная благодарность Дмитрию за прекрасный курс!Очень понятно, доступным языком изложены самые непростые темы. Быстрая обратная связь. Дмитрий, вы замечательный преподаватель! На очереди к изучению ваши курсы по Фотошопу и Адоб Иллюстатору )",
+        user: "Анна Плужникова",
+        time: "17 дней назад",
+      },
+    ];
+    return (
+      <div className={styles.Rating}>
+        <div className={styles.Rating__flex}>
+          <div className={styles.Rating__title}>
+            <h2>Отзывы прошедших курс</h2>
+            <div className={styles.Bottom__rating}>
+              <h3>Рейтинг и отзывы</h3>
+              <div className={styles.Bottom__rating_wrap}>
+                <div className={styles.Wrap_5}>
+                  {" "}
+                  <p>5</p>
+                  <span>/5</span>
+                </div>
+                <img src="../src/assets/graphprfs.png" alt="graph" />
+              </div>
+            </div>
+          </div>
+          <div className={styles.Rating__container}>
+            {Array.from({ length: 5 }, (item, index) => (
+              <div className={styles.Rating__container_wrap}>
+                <div className={styles.Wrap__stars}>
+                  {Array.from({ length: 5 }, () => (
+                    <img
+                      src="../src/assets/Star_full.svg"
+                      alt="star"
+                      width="15px"
+                      height="15px"
+                    />
+                  ))}
+                </div>
+                <div className={styles.Wrap__title}>
+                  <p>
+                    Огромная благодарность Дмитрию за прекрасный курс! Очень
+                    понятно, доступным языком изложены самые непростые темы.
+                    Быстрая обратная связь. Дмитрий, вы замечательный
+                    преподаватель! На очереди к изучению ваши курсы по Фотошопу
+                    и Адоб Иллюстатору )
+                  </p>
+                  <div className={styles.Wrap__title_user}>
+                    <a href="#">Анна Плужникова</a>
+                    <span>17 дней назад</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <button>
+          Показать еще <img src="../src/assets/arrow_down.svg" alt="arrow" />
+        </button>
+      </div>
+    );
+  };
   return (
     <section className={styles.Description}>
-      {Aside()}
-      {Learn()}
-      {Containers()}
-      {Reward()}
+      <div className={styles.Description__container}>
+        {Aside()}
+        {Learn()}
+        {Containers()}
+        {Reward()}
+        {Rating()}
+      </div>
     </section>
   );
 }

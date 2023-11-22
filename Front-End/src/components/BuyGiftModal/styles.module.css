@@ -1,0 +1,413 @@
+@charset "UTF-8";
+.Gift__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.Gift__form .Gift__form__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 36px;
+}
+.Gift__form .Gift__form_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 30px;
+}
+.Gift__form .Gift__form_wrap span {
+  color: var(--system-colors-secondary-3, rgba(0, 0, 0, 0.5));
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 44px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email label {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 97px;
+  width: 100%;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email label span {
+  color: #F00;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email .Email__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email .Email__flex input {
+  border-radius: 5px;
+  border: 1px solid var(--system-colors-secondary-3, rgba(0, 0, 0, 0.5));
+  background: var(--background-colors-white, #FFF);
+  width: 360px;
+  padding: 12px 0px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_email .Email__flex span {
+  color: var(--system-colors-secondary-3, rgba(0, 0, 0, 0.5));
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Gift__form .Gift__form_wrap .Gift__form_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_time label {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Gift__form .Gift__form_wrap .Gift__form_time .Email__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_time .Email__flex input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: #FFF;
+  padding: 12px 0px;
+  max-width: 180px;
+  width: 100%;
+}
+.Gift__form .Gift__form_wrap .Gift__form_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_text label {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Gift__form .Gift__form_wrap .Gift__form_text .Email__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.Gift__form .Gift__form_wrap .Gift__form_text .Email__flex textarea {
+  border-radius: 5px;
+  border: 1px solid var(--system-colors-secondary-3, rgba(0, 0, 0, 0.5));
+  background: var(--background-colors-white, #FFF);
+  min-width: 260px;
+  max-width: 360px;
+  width: 100%;
+  min-height: 90px;
+  max-height: 90px;
+}
+
+.Form__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 39px;
+}
+.Form__top .Promocode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 13px;
+}
+.Form__top .Promocode .Promocode__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.Form__top .Promocode .Promocode__div input {
+  max-width: 222px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--system-colors-secondary-3, rgba(0, 0, 0, 0.5));
+  background: var(--background-colors-white, #FFF);
+  padding: 9.25px 0px;
+}
+.Form__top .Promocode .Promocode__div button {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 5px;
+  border: 1px solid var(--system-colors-primary, #171A53);
+  padding: 8.5px 0px;
+  max-width: 106px;
+  width: 100%;
+  background: none;
+}
+.Form__top .Promocode label {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 2.5px;
+  cursor: pointer;
+}
+.Form__top .Form__top_links {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.Form__top .Form__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Form__top .Form__cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 30px;
+  gap: 82px;
+}
+.Form__top .Form__cost label {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Form__top .Form__cost span {
+  color: var(--system-colors-primary, #171A53);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  /* H/H3 */
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  top: -20%;
+}
+
+.Promocode__div {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
+  /* Дополнительные стили, если нужны */
+}
+
+.Promocode__div.visible {
+  opacity: 1;
+  max-height: 40px;
+  /* Измените значение на максимальную высоту, которая может быть достигнута контентом */
+}
+
+.Form__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 22.5px;
+}
+.Form__bottom button {
+  border-radius: 5px;
+  background: var(--system-colors-primary, #171A53);
+  max-width: 120px;
+  width: 100%;
+  padding: 7.75px;
+  border: none;
+  color: var(--background-colors-white, #FFF);
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.Form__bottom .Form__bottom_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.Form__bottom .Form__bottom_links a {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.Form__bottom p {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Form__bottom p a {
+  color: #000;
+  -webkit-font-feature-settings: 'clig' off, 'liga' off;
+          font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}

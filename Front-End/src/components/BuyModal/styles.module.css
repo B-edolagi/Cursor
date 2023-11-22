@@ -1,0 +1,77 @@
+.Register__modal {
+    max-width: 540px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.CloseButton {
+    background: none;
+    border: 0px;
+    position: relative;
+    left: 70.5px;
+    top: -29.2px;
+}
+
+.PasswordRecoveryBtn {
+    position: absolute;
+    top: 74%;
+    left: 29.5%;
+    background: none;
+    border: 0px;
+    color: #4485ED;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    /* 125% */
+}
+
+.Tabs__div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.PasswordRecoveryBtn:active {
+    color: #171A53;
+}
+
+.Tabs_h2 {
+    color: var(--system-colors-primary, #171A53);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* H/H3 */
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 453px;
+    width: 100%;
+}
+
+.Register__modal_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+
+.Tabs__div_main {
+    display: flex;
+}

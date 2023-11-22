@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from "react";
 import styles from "./styles.module.css";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import AuthModal from "../AuthModal";
+import BuyModal from "../BuyModal";
 
 interface ButtonProps {
   fullWidth?: boolean;
@@ -109,15 +110,32 @@ export function Next1(props: ButtonProps) {
 }
 
 export function Buy(props: ButtonProps) {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  const openAuthModal = () => {
+    setIsAuthModalOpen(true);
+  };
+
+  const closeAuthModal = () => {
+    setIsAuthModalOpen(false);
+  };
+
   return (
-    <button
-      onClick={props.onClick}
-      type="button"
-      disabled={props.disabled}
-      className={styles.Buy}
-    >
-      Купить
-    </button>
+    <>
+      <button
+        onClick={openAuthModal}
+        type="button"
+        disabled={props.disabled}
+        className={styles.Buy}
+      >
+        Купить
+      </button>
+      <BuyModal
+        isOpen={isAuthModalOpen}
+        onRequestClose={closeAuthModal}
+        defaultValue={0}
+      />
+    </>
   );
 }
 
@@ -135,14 +153,32 @@ export function TryFree(props: ButtonProps) {
 }
 
 export function Favourites(props: ButtonProps) {
+  const [text, setText] = useState("Хочу пройти");
+  const [img, setIMG] = useState("../src/assets/heart_unfill.svg");
+  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
+  const [color, setColor] = useState("#171A53");
+  const toggleFav = () => {
+    if (text === "Хочу пройти") {
+      setText("В списке желаний");
+      setIMG("../src/assets/hear_fill.svg");
+      setBackgroundColor("#171A53");
+      setColor("#FFF");
+    } else {
+      setText("Хочу пройти");
+      setIMG("../src/assets/heart_unfill.svg");
+      setBackgroundColor("#ffffff");
+      setColor("#171A53");
+    }
+  };
   return (
     <button
-      onClick={props.onClick}
+      onClick={toggleFav}
       type="button"
       disabled={props.disabled}
       className={styles.Fav}
+      style={{ backgroundColor, color }}
     >
-      Хочу пройти
+      <img src={img} alt="heart" /> {text}
     </button>
   );
 }
